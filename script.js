@@ -37,7 +37,7 @@ contactForm.addEventListener("submit", async function (event) {
 
         // Send information to our backend
         const response = await fetch(
-            "http://localhost:5000/api/contact",
+            "https://emcrea.onrender.com/api/contact",
             {
                 method: "POST",
 
