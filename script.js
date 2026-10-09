@@ -2,14 +2,38 @@
 // MOBILE MENU
 // =========================================
 
-const menuBtn = document.getElementById("menuBtn");
-const navbar = document.querySelector(".navbar");
+// =========================================
+// MOBILE MENU
+// =========================================
 
-menuBtn.addEventListener("click", () => {
+document.addEventListener("DOMContentLoaded", function () {
+    const menuBtn = document.getElementById("menuBtn");
+    const navbar = document.querySelector(".header .navbar");
 
-    navbar.classList.toggle("active");
+    if (!menuBtn || !navbar) {
+        console.error("Mobile menu elements not found.");
+        return;
+    }
 
+    menuBtn.addEventListener("click", function () {
+        navbar.classList.toggle("active");
+
+        const isOpen = navbar.classList.contains("active");
+
+        menuBtn.textContent = isOpen ? "✕" : "☰";
+        menuBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navbar.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navbar.classList.remove("active");
+            menuBtn.textContent = "☰";
+            menuBtn.setAttribute("aria-expanded", "false");
+        });
+    });
 });
+
+
 
 // =========================================
 // CONTACT FORM
@@ -95,13 +119,9 @@ contactForm.addEventListener("submit", async function (event) {
 const navLinks = document.querySelectorAll(".navbar a");
 
 navLinks.forEach(link => {
-
     link.addEventListener("click", () => {
-
         navbar.classList.remove("active");
-
     });
-
 });
 
 
