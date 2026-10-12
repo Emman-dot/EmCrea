@@ -1199,3 +1199,910 @@ button {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   HERO MOBILE IMPROVEMENTS
+========================================= */
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 150px 25px 70px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+        overflow: hidden;
+    }
+
+    .hero-small-text {
+        font-size: 15px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(43px, 11vw, 60px);
+        line-height: 1;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-top: 22px;
+    }
+
+    .hero-buttons {
+        margin-top: 25px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .hero-buttons .primary-btn,
+    .hero-buttons .secondary-btn {
+        font-size: 14px;
+        padding: 13px 20px;
+    }
+
+    .hero-visual {
+        height: 330px;
+        width: 100%;
+    }
+
+    .hero-card {
+        width: 220px;
+        height: 270px;
+    }
+
+    .hero-card p {
+        font-size: 85px;
+        letter-spacing: -7px;
+    }
+
+    .shape-one {
+        width: 80px;
+        height: 80px;
+        right: 15px;
+    }
+
+    .shape-two {
+        width: 50px;
+        height: 50px;
+        left: 10px;
+        bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    padding: 35px 50px;
+    background: #17121a;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer p {
+    color: #ffc0de;
+    font-size: 25px;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    gap: 35px;
+    padding-bottom: 45px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.footer-logo img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: #ffffff;
+}
+
+.footer-top > p {
+    max-width: 340px;
+    margin: 0;
+    color: #e4dce7;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.footer-contact {
+    color: #ffc0de;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.footer-contact:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    margin: 0;
+    color: #cfc5d2;
+    font-size: 13px;
+}
+
+.footer-bottom a {
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #ffc0de;
+}
+
+/* FOOTER MOBILE */
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 25px 22px;
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-bottom: 30px;
+    }
+
+    .footer-top > p {
+        max-width: 100%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+    }
+}
+
+
+
+
+
+/* =========================================
+   FINAL FOOTER STYLES
+========================================= */
+
+footer.footer {
+    display: block;
+    width: 100%;
+    padding: 45px 5% 25px;
+    box-sizing: border-box;
+    background-color: #17121a;
+    color: #ffffff;
+}
+
+footer.footer .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 35px;
+}
+
+footer.footer .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+footer.footer .footer-logo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+footer.footer .footer-logo span {
+    color: #ffffff;
+}
+
+footer.footer .footer-top > p {
+    margin: 0;
+    max-width: 340px;
+    color: #e4dce7;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+footer.footer .footer-contact {
+    color: #ffc0de;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+footer.footer .footer-contact:hover {
+    color: #ffffff;
+}
+
+footer.footer .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer.footer .footer-bottom p,
+footer.footer .footer-bottom a {
+    margin: 0;
+    color: #d8cedb;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+footer.footer .footer-bottom a:hover {
+    color: #ffc0de;
+}
+
+@media (max-width: 768px) {
+    footer.footer .footer-top {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    footer.footer .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+
+
+
+
+
+
+/* =========================================
+   EMCRÉA PHONE LAYOUT FIX
+========================================= */
+
+@media screen and (max-width: 768px) {
+
+    /* Header */
+    .header {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .header .logo {
+        width: 55px;
+        height: 55px;
+    }
+
+    /* Hero section */
+    .hero {
+        min-height: 100svh;
+        padding: 110px 25px 50px;
+        grid-template-columns: 1fr;
+        gap: 25px;
+        align-content: center;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-small-text {
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 18px;
+    }
+
+    .hero h1 {
+        font-size: clamp(40px, 10vw, 56px);
+        line-height: 0.98;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+
+    .hero-buttons {
+        margin-top: 24px;
+        gap: 10px;
+    }
+
+    .hero-buttons .primary-btn,
+    .hero-buttons .secondary-btn {
+        font-size: 13px;
+        padding: 13px 18px;
+    }
+
+    /* Decorative graphic */
+    .hero-visual {
+        height: 260px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .hero-card {
+        width: 190px;
+        height: 230px;
+    }
+
+    .hero-card p {
+        font-size: 75px;
+        letter-spacing: -6px;
+    }
+
+    .shape-one {
+        width: 65px;
+        height: 65px;
+        right: 25px;
+        top: 5px;
+    }
+
+    .shape-two {
+        width: 40px;
+        height: 40px;
+        left: 25px;
+        bottom: 15px;
+    }
+}
+
+
+
+
+
+/* =====================================
+   MOBILE HEADER & HERO
+   These rules affect phones only.
+===================================== */
+
+@media screen and (max-width: 768px) {
+
+    /* HEADER */
+    .header {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 14px 5%;
+        min-height: 70px;
+    }
+
+    .header .logo img {
+        display: block;
+        width: 115px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Hide desktop contact button on phones */
+    .header .header-btn {
+        display: none;
+    }
+
+    /* Mobile menu button */
+    .header .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        padding: 0;
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 10px;
+        background: transparent;
+        color: #ffffff;
+        font-size: 26px;
+        cursor: pointer;
+        flex-shrink: 0;
+    }
+
+    /* Dropdown navigation */
+    .header .navbar {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 10px;
+        background: #17121a;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        z-index: 1000;
+    }
+
+    .header .navbar.active {
+        display: flex;
+    }
+
+    .header .navbar a {
+        display: block;
+        padding: 14px 12px;
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+
+    .header .navbar a:hover {
+        background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* HERO SECTION */
+    .hero {
+        min-height: auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 28px;
+        padding: 60px 6% 45px;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 10vw, 54px);
+        line-height: 1.12;
+        letter-spacing: -1.5px;
+        overflow-wrap: break-word;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.7;
+        margin-top: 18px;
+    }
+
+    .hero-small-text {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 16px;
+    }
+
+    /* HERO BUTTONS */
+    .hero-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .hero-buttons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 12px 18px;
+        box-sizing: border-box;
+        font-size: 14px;
+        text-align: center;
+    }
+
+    /* Decorative visual */
+    .hero-visual {
+        width: 100%;
+        max-width: 340px;
+        min-height: 220px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+}
+
+/* Extra adjustments for narrow phones */
+@media screen and (max-width: 420px) {
+
+    .hero {
+        padding: 45px 5% 35px;
+    }
+
+    .hero h1 {
+        font-size: clamp(34px, 9.5vw, 42px);
+        letter-spacing: -1px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .hero-visual {
+        min-height: 180px;
+    }
+}
+
+
+
+
+
+/* MOBILE MENU BUTTON VISIBILITY FIX */
+@media screen and (max-width: 768px) {
+    .header .menu-btn {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative;
+        z-index: 1001;
+        flex: 0 0 44px;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        background: #17121a !important;
+        color: #ffffff !important;
+        border: 1px solid #17121a !important;
+        border-radius: 10px;
+        font-size: 26px;
+        line-height: 1;
+        cursor: pointer;
+    }
+
+    .header .logo img {
+        width: 90px;
+        height: auto;
+    }
+
+    .header {
+        background: #ffffff;
+        min-height: 76px;
+    }
+
+    /* Keep the dropdown above the page content */
+    .header .navbar {
+        z-index: 1000;
+    }
+}
+
+
+
+
+/* MOBILE HERO GRAPHIC AND SPACING */
+@media screen and (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        height: auto;
+        overflow: hidden;
+        padding: 36px 6% 28px;
+        gap: 18px;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-visual {
+        position: relative;
+        width: 100%;
+        max-width: 280px;
+        min-height: 190px;
+        height: auto;
+        margin: 8px auto 0;
+        overflow: hidden;
+    }
+
+    .hero-card {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .hero {
+        padding: 30px 5% 24px;
+    }
+
+    .hero-visual {
+        max-width: 240px;
+        min-height: 160px;
+    }
+}
+
+
+
+
+
+
+/* =================================
+   EMCRÉA MOBILE FOOTER
+================================= */
+
+@media screen and (max-width: 768px) {
+    footer.footer-top {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 24px;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 28px 22px 24px;
+        box-sizing: border-box;
+        background: #17121a !important;
+        color: #ffffff !important;
+        overflow: hidden;
+    }
+
+    footer.footer-top > div:first-child {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    footer.footer-top .footer-logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 16px;
+        color: #ffffff !important;
+        text-decoration: none;
+    }
+
+    footer.footer-top .footer-logo img {
+        display: block;
+        width: 52px !important;
+        min-width: 52px;
+        max-width: 52px !important;
+        height: 52px !important;
+        object-fit: contain;
+        border-radius: 50%;
+    }
+
+    footer.footer-top .footer-logo span {
+        color: #ffffff !important;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    footer.footer-top .footer-contact {
+        display: block;
+        margin: 0 0 10px;
+        color: #f0a8ed !important;
+        font-size: 15px;
+        line-height: 1.6;
+        text-decoration: none;
+    }
+
+    footer.footer-top > div:first-child > p {
+        margin: 0;
+        max-width: 360px;
+        color: #d9d2dc !important;
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    footer.footer-top .footer-bottom {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 18px 0 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.18);
+        box-sizing: border-box;
+    }
+
+    footer.footer-top .footer-bottom p {
+        margin: 0;
+        color: #d9d2dc !important;
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+    footer.footer-top .footer-bottom a {
+        color: #f0a8ed !important;
+        font-size: 14px;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+/* =================================
+   FINAL EMCRÉA FOOTER FIX
+================================= */
+
+footer.footer.footer-top {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 45px 5% 25px;
+    box-sizing: border-box;
+    background: #17121a !important;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+footer.footer.footer-top > div:first-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 20px 35px;
+    width: 100%;
+}
+
+footer.footer.footer-top .footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #ffffff;
+}
+
+footer.footer.footer-top .footer-logo img {
+    display: block;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+footer.footer.footer-top .footer-contact {
+    color: #ffc0de;
+    font-size: 16px;
+    font-weight: 700;
+    white-space: normal;
+}
+
+footer.footer.footer-top > div:first-child > p {
+    margin: 0;
+    max-width: 400px;
+    color: #e4dce7;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+footer.footer.footer-top .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer.footer.footer-top .footer-bottom p,
+footer.footer.footer-top .footer-bottom a {
+    margin: 0;
+    color: #d8cedb;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+footer.footer.footer-top .footer-bottom a:hover {
+    color: #ffc0de;
+}
+
+/* Phone layout only */
+@media screen and (max-width: 768px) {
+    footer.footer.footer-top {
+        padding: 30px 22px 24px;
+    }
+
+    footer.footer.footer-top > div:first-child {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    footer.footer.footer-top .footer-logo img {
+        width: 48px;
+        height: 48px;
+    }
+
+    footer.footer.footer-top .footer-contact {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    footer.footer.footer-top > div:first-child > p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    footer.footer.footer-top .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-top: 22px;
+        padding-top: 16px;
+    }
+}
