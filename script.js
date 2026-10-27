@@ -2,10 +2,6 @@
 // MOBILE MENU
 // =========================================
 
-// =========================================
-// MOBILE MENU
-// =========================================
-
 document.addEventListener("DOMContentLoaded", function () {
     const menuBtn = document.getElementById("menuBtn");
     const navbar = document.querySelector(".header .navbar");
@@ -118,10 +114,99 @@ contactForm.addEventListener("submit", async function (event) {
 
 const navLinks = document.querySelectorAll(".navbar a");
 
-navLinks.forEach(link => {
-    link.addEventListener("click", () => {
-        navbar.classList.remove("active");
+navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        const navbar = document.querySelector(".header .navbar");
+        if (navbar) {
+            navbar.classList.remove("active");
+        }
     });
 });
 
 
+// EmCréa Cookie Consent
+document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const modal = document.getElementById("cookie-modal");
+
+    const acceptBtn = document.getElementById("accept-all-cookies");
+    const rejectBtn = document.getElementById("reject-cookies");
+    const customizeBtn = document.getElementById("customize-cookies");
+    const saveBtn = document.getElementById("save-cookie-preferences");
+    const closeBtn = document.getElementById("close-cookie-settings");
+
+    const analytics = document.getElementById("analytics-cookies");
+    const marketing = document.getElementById("marketing-cookies");
+
+    const storageKey = "emcrea-cookie-consent-v1";
+
+    if (!banner || !modal) {
+        console.error("Cookie banner or preferences modal is missing.");
+        return;
+    }
+
+    function getConsent() {
+        try {
+            return JSON.parse(localStorage.getItem(storageKey));
+        } catch {
+            return null;
+        }
+    }
+
+    function saveConsent(analyticsAllowed, marketingAllowed) {
+        const consent = {
+            essential: true,
+            analytics: analyticsAllowed,
+            marketing: marketingAllowed,
+            savedAt: new Date().toISOString()
+        };
+
+        try {
+            localStorage.setItem(storageKey, JSON.stringify(consent));
+        } catch (error) {
+            console.error("Could not save cookie preferences:", error);
+        }
+
+        banner.hidden = true;
+        modal.hidden = true;
+    }
+
+    const saved = getConsent();
+
+    if (saved &&
+        typeof saved.analytics === "boolean" &&
+        typeof saved.marketing === "boolean") {
+        banner.hidden = true;
+        if (analytics) analytics.checked = saved.analytics;
+        if (marketing) marketing.checked = saved.marketing;
+    } else {
+        banner.hidden = false;
+        modal.hidden = true;
+    }
+
+    acceptBtn?.addEventListener("click", function () {
+        saveConsent(true, true);
+    });
+
+    rejectBtn?.addEventListener("click", function () {
+        saveConsent(false, false);
+    });
+
+    customizeBtn?.addEventListener("click", function () {
+        const current = getConsent();
+        if (analytics) analytics.checked = current?.analytics ?? false;
+        if (marketing) marketing.checked = current?.marketing ?? false;
+        modal.hidden = false;
+    });
+
+    saveBtn?.addEventListener("click", function () {
+        saveConsent(
+            analytics ? analytics.checked : false,
+            marketing ? marketing.checked : false
+        );
+    });
+
+    closeBtn?.addEventListener("click", function () {
+        modal.hidden = true;
+    });
+});
